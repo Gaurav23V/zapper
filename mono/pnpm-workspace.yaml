@@ -1,0 +1,4 @@
+# filepath: /home/deviant/Downloads/git_clone/zapper/mono/pnpm-workspace.yaml
+packages:
+  - 'apps/*'
+  - 'packages/*'
