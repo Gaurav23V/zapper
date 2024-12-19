@@ -4,6 +4,7 @@ import {
   createAvatarSchema,
   createElementSchema,
   createMapSchema,
+  UpdateElementSchema,
 } from "../../types";
 import client from "@repo/db/client";
 
@@ -30,7 +31,7 @@ adminRouter.post("/element", adminMiddleware, async (req, res) => {
 });
 
 adminRouter.put("/element/:elementId", adminMiddleware, async (req, res) => {
-  const parsedData = createElementSchema.safeParse(req.body);
+  const parsedData = UpdateElementSchema.safeParse(req.body);
   if (!parsedData.success) {
     res.status(400).json("Validation Failed!");
     return;

@@ -19,7 +19,7 @@ export const createSpaceSchema = z.object({
   name: z.string(),
   // custom function that validates 100x100 schema
   dimensions: z.string().regex(/^[0-9]{1,4}x[0-9]{1,4}$/),
-  mapId: z.string(),
+  mapId: z.string().optional(),
 });
 
 export const addElementSchema = z.object({
